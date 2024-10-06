@@ -1,14 +1,16 @@
-import { Helmet } from 'react-helmet-async'
 import { Outlet } from 'react-router-dom'
+
+import { Header } from '@/components/header'
 
 export function AppLayout() {
   return (
     <>
-      <Helmet title="Dashboard" />
-      <h1>Header</h1>
+      <div className="flex min-h-screen flex-col antialiased">
+        <Header />
 
-      <div>
-        <Outlet />
+        <div className="flex flex-1 flex-col gap-4 p-8 pt-6">
+          <Outlet />
+        </div>
       </div>
     </>
   )
