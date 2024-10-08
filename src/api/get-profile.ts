@@ -6,8 +6,8 @@ interface GetProfileResponse {
   email: string
   phone: string | null
   role: 'manager' | 'customer'
-  createdAt: Date | null
-  updatedAt: Date | null
+  createdAt: string
+  updatedAt: string | null
 }
 
 export async function getProfile() {
