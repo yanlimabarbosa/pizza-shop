@@ -11,12 +11,14 @@ export interface PaginationProps {
   pageIndex: number
   totalCount: number
   perPage: number
+  onPageChange: (pageIndex: number) => Promise<void> | void
 }
 
 export function Pagination({
   pageIndex,
   perPage,
   totalCount,
+  onPageChange,
 }: PaginationProps) {
   const pages = Math.ceil(totalCount / perPage) || 1
 
@@ -31,20 +33,39 @@ export function Pagination({
           Página {pageIndex + 1} de {pages}
         </div>
         <div>
-          <Button variant="outline" className="h-8 w-8 p-0">
+          <Button
+            variant="outline"
+            className="h-8 w-8 p-0"
+            onClick={() => onPageChange(0)}
+            disabled={pageIndex === 0}
+          >
             <ChevronsLeft />
             <span className="sr-only">Primeira página</span>
           </Button>
-          <Button variant="outline" className="h-8 w-8 p-0">
+          <Button
+            variant="outline"
+            className="h-8 w-8 p-0"
+            onClick={() => onPageChange(pageIndex - 1)}
+            disabled={pageIndex === 0}
+          >
             <ChevronLeft />
-            <span className="sr-only">Próxima página</span>
-          </Button>
-          <Button variant="outline" className="h-8 w-8 p-0">
-            <ChevronRight />
             <span className="sr-only">Página anterior</span>
           </Button>
-          <Button variant="outline" className="h-8 w-8 p-0">
-            <ChevronsRight />
+          <Button
+            onClick={() => onPageChange(pageIndex + 1)}
+            variant="outline"
+            className="h-8 w-8 p-0"
+            disabled={pages <= pageIndex + 1}
+          >
+            <ChevronRight />
+            <span className="sr-only">Próxima Página</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-8 w-8 p-0"
+            disabled={pages <= pageIndex + 1}
+          >
+            <ChevronsRight onClick={() => onPageChange(pages - 1)} />
             <span className="sr-only">Última página</span>
           </Button>
         </div>
