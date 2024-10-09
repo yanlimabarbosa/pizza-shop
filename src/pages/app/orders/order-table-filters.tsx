@@ -63,12 +63,6 @@ export function OrderTableFilters() {
 
       return state
     })
-
-    reset({
-      orderId: '',
-      customerName: '',
-      status: 'all',
-    })
   }
 
   function handleClearFilters() {
@@ -79,6 +73,12 @@ export function OrderTableFilters() {
       state.set('page', '1')
 
       return state
+    })
+
+    reset({
+      orderId: '',
+      customerName: '',
+      status: 'all',
     })
   }
 
