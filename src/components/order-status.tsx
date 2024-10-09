@@ -7,8 +7,8 @@ type OrderStatus =
 
 const orderStatusMap: Record<OrderStatus, string> = {
   pending: 'Pendente',
-  processing: 'Em entrega',
-  delivering: 'delivering',
+  processing: 'Em preparo',
+  delivering: 'Em entrega',
   delivered: 'Entregue',
   canceled: 'Cancelado',
 }
