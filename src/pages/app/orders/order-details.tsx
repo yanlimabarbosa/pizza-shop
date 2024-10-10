@@ -32,8 +32,6 @@ export function OrderDetails({ orderId, open }: OrderDetailsProps) {
     enabled: open,
   })
 
-  console.log(order)
-
   return (
     <DialogContent>
       <DialogHeader>
