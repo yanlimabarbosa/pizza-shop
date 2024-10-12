@@ -58,14 +58,15 @@ export function Pagination({
             disabled={pages <= pageIndex + 1}
           >
             <ChevronRight />
-            <span className="sr-only">Próxima Página</span>
+            <span className="sr-only">Próxima página</span>
           </Button>
           <Button
             variant="outline"
             className="h-8 w-8 p-0"
             disabled={pages <= pageIndex + 1}
+            onClick={() => onPageChange(pages - 1)}
           >
-            <ChevronsRight onClick={() => onPageChange(pages - 1)} />
+            <ChevronsRight />
             <span className="sr-only">Última página</span>
           </Button>
         </div>
