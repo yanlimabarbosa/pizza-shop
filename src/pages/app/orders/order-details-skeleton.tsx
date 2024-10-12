@@ -1,7 +1,6 @@
-import { Table } from 'lucide-react'
-
 import { Skeleton } from '@/components/ui/skeleton'
 import {
+  Table,
   TableBody,
   TableCell,
   TableFooter,
@@ -21,32 +20,26 @@ export function OrderDetailsSkeleton() {
               <Skeleton className="ml-auto h-5 w-20" />
             </TableCell>
           </TableRow>
-
           <TableRow>
             <TableCell className="text-muted-foreground">Cliente</TableCell>
             <TableCell className="text-right">
               <Skeleton className="ml-auto h-5 w-[164px]" />
             </TableCell>
           </TableRow>
-
           <TableRow>
             <TableCell className="text-muted-foreground">Telefone</TableCell>
             <TableCell className="text-right">
               <Skeleton className="ml-auto h-5 w-[140px]" />
             </TableCell>
           </TableRow>
-
           <TableRow>
             <TableCell className="text-muted-foreground">E-mail</TableCell>
             <TableCell className="text-right">
               <Skeleton className="ml-auto h-5 w-[200px]" />
             </TableCell>
           </TableRow>
-
           <TableRow>
-            <TableCell className="text-muted-foreground">
-              Realizado há
-            </TableCell>
+            <TableCell className="text-muted-foreground">Criado há</TableCell>
             <TableCell className="text-right">
               <Skeleton className="ml-auto h-5 w-[148px]" />
             </TableCell>
@@ -85,7 +78,7 @@ export function OrderDetailsSkeleton() {
         </TableBody>
         <TableFooter>
           <TableRow>
-            <TableCell colSpan={3}>Total do pedido:</TableCell>
+            <TableCell colSpan={3}>Total do pedido</TableCell>
             <TableCell className="text-right font-medium">
               <Skeleton className="ml-auto h-5 w-20" />
             </TableCell>
