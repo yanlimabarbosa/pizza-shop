@@ -165,7 +165,6 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
           Cancelar
         </Button>
       </TableCell>
-      <TableCell></TableCell>
     </TableRow>
   )
 }
