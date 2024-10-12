@@ -1,12 +1,32 @@
-import path from "path"
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
+import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
+import type { /* InlineConfig, */ TestOptions } from 'vitest'
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-})
+  test: {
+    globals: true,
+  } as TestOptions,
+} as UserConfig)
+
+// old way to setup tests here:
+// export default defineConfig({
+//   plugins: [react()],
+//   resolve: {
+//     alias: {
+//       '@': path.resolve(__dirname, './src'),
+//     },
+//   },
+//   test: {
+//     globals: true,
+//   },
+// } as UserConfig & {
+//   test: InlineConfig
+// })
