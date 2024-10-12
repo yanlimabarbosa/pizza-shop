@@ -17,29 +17,29 @@ export function OrderDetailsSkeleton() {
         <TableBody>
           <TableRow>
             <TableCell className="text-muted-foreground">Status</TableCell>
-            <TableCell>
-              <Skeleton className="h-5 w-20" />
+            <TableCell className="flex justify-end">
+              <Skeleton className="ml-auto h-5 w-20" />
             </TableCell>
           </TableRow>
 
           <TableRow>
             <TableCell className="text-muted-foreground">Cliente</TableCell>
-            <TableCell>
-              <Skeleton className="h-5 w-[164px]" />
+            <TableCell className="text-right">
+              <Skeleton className="ml-auto h-5 w-[164px]" />
             </TableCell>
           </TableRow>
 
           <TableRow>
             <TableCell className="text-muted-foreground">Telefone</TableCell>
-            <TableCell>
-              <Skeleton className="h-5 w-[140px]" />
+            <TableCell className="text-right">
+              <Skeleton className="ml-auto h-5 w-[140px]" />
             </TableCell>
           </TableRow>
 
           <TableRow>
             <TableCell className="text-muted-foreground">E-mail</TableCell>
-            <TableCell>
-              <Skeleton className="h-5 w-[200px]" />
+            <TableCell className="text-right">
+              <Skeleton className="ml-auto h-5 w-[200px]" />
             </TableCell>
           </TableRow>
 
@@ -47,8 +47,8 @@ export function OrderDetailsSkeleton() {
             <TableCell className="text-muted-foreground">
               Realizado há
             </TableCell>
-            <TableCell>
-              <Skeleton className="h-5 w-[148px]" />
+            <TableCell className="text-right">
+              <Skeleton className="ml-auto h-5 w-[148px]" />
             </TableCell>
           </TableRow>
         </TableBody>
@@ -71,13 +71,13 @@ export function OrderDetailsSkeleton() {
                   <Skeleton className="h-5 w-[140px]" />
                 </TableCell>
                 <TableCell className="text-right">
-                  <Skeleton className="h-5 w-3" />
+                  <Skeleton className="ml-auto h-5 w-3" />
                 </TableCell>
                 <TableCell className="text-right">
-                  <Skeleton className="h-5 w-12" />
+                  <Skeleton className="ml-auto h-5 w-12" />
                 </TableCell>
                 <TableCell className="text-right">
-                  <Skeleton className="h-5 w-12" />
+                  <Skeleton className="ml-auto h-5 w-12" />
                 </TableCell>
               </TableRow>
             )
@@ -87,7 +87,7 @@ export function OrderDetailsSkeleton() {
           <TableRow>
             <TableCell colSpan={3}>Total do pedido:</TableCell>
             <TableCell className="text-right font-medium">
-              <Skeleton className="h-5 w-20" />
+              <Skeleton className="ml-auto h-5 w-20" />
             </TableCell>
           </TableRow>
         </TableFooter>
