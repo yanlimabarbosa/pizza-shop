@@ -21,16 +21,16 @@ export function DayOrderAmountCard() {
       <CardContent className="space-y-1">
         {dayOrdersAmount ? (
           <>
-            <span className="text-2xl font-bold tracking-tight">
+            <span className="daily-amount text-2xl font-bold tracking-tight">
               {dayOrdersAmount.amount.toLocaleString('pt-BR')}
             </span>
-            <p className="text-sm text-muted-foreground">
+            <p className="daily-percentage text-sm text-muted-foreground">
               {dayOrdersAmount.diffFromYesterday < 0 ? (
                 <span className="text-rose-500 dark:text-rose-400">
-                  {dayOrdersAmount.amount}%
+                  -{dayOrdersAmount.amount}%
                 </span>
               ) : (
-                <span className="text-emerald-500 dark:text-emerald-400">
+                <span className="daily-percentage text-emerald-500 dark:text-emerald-400">
                   +{dayOrdersAmount.diffFromYesterday}%
                 </span>
               )}{' '}
